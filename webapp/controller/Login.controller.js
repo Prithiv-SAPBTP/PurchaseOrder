@@ -16,11 +16,9 @@ sap.ui.define([
             var sUsername = oView.byId("username").getValue();
             var sPassword = oView.byId("password").getValue();
            
-      
             if (!sUsername || !sPassword) {
               MessageToast.show("Please enter username and password.");
-              return;
-              
+              return; 
             }
 
             var getAllRoles = this.getView().getModel().oData.roles;
@@ -28,12 +26,12 @@ sap.ui.define([
             for (let i = 0; i < getAllRoles.length; i++) {
                 if (getAllRoles[i].Username == sUsername && getAllRoles[i].Password == sPassword) {
                     var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                    MessageToast.show("Login Successful....");
+                    MessageToast.show("Login Successful...");
                     oRouter.navTo("HomePage")
+                    break;
                 }
                 else{
-                    // MessageToast.show("Enter Correct UserName or Password");
-                    // MessageBox.error("Enter a valid UserName or Password");    
+                    MessageToast.show("Enter a valid UserName or Password");    
                 }
             }
       

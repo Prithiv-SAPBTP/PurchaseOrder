@@ -10,7 +10,7 @@
 <Button icon="sap-icon://delete" text="Delete" press="onDelete"></Button>
 </content>
 </Toolbar>
-<Table items="{/HEADERXSet}">
+<Table items="{/HEADERXSet}" mode="SingleSelectLeft">
         <columns>
             <Column>
             <Text text="Purchasing Document Number"/>
@@ -54,6 +54,5 @@
         </ColumnListItem>
         </items>              
         </Table>
-
     </Page>
 </mvc:View>
