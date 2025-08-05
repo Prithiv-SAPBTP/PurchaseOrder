@@ -1,0 +1,49 @@
+<mvc:View controllerName="newproject.controller.CreatePage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+	xmlns:mdc="sap.ui.mdc"
+	xmlns:mdcvh="sap.ui.mdc.valuehelp"
+	xmlns:mdcValueHelpContent="sap.ui.mdc.valuehelp.content">
+    <Page id="page" title="Po Create" showNavButton="true" navButtonPress="onBack" > 
+<VBox >
+<f:SimpleForm >
+<f:content>
+
+<Label text="Purchasing Document Number" />
+<Input value="{newObject>/Ebeln}" width="40%" id="idEbeln"/>
+
+<Label text="Company Code"/>
+<Input value="{newObject>/Bukrs}" width="40%" id="idBukrs"/>
+
+<Label text="Document Category"/>
+<Input value="{newObject>/Bstyp}" width="40%" id="idBstyp"  showValueHelp="true" 
+valueHelpRequest="onBstypValueHelp" />
+
+<Label text="Document Type"/>
+<Input value="{newObject>/Bsart}" width="40%" id="idBsart"/>
+
+<Label text="Status of Purchasing"/>
+<Input value="{newObject>/Statu}" width="40%" id="idStatu"/>
+
+<Label text="Last Item Number"/>
+<Input value="{newObject>/Lponr}" width="40%" id="idLponr"/>
+
+<Label text="Creation Date of Purchasing"/>
+<Input value="{newObject>/Aedat}" width="40%" id="idAedat"/>
+
+</f:content>
+</f:SimpleForm>
+</VBox>
+	<footer>
+			<OverflowToolbar >
+				<ToolbarSpacer/>
+				<Button type="Accept" text="Save"  press="onSave"/>
+				<Button type="Reject" text="Cancel" press="onCancel" />
+				
+			</OverflowToolbar>
+		</footer>
+
+    </Page>
+</mvc:View>

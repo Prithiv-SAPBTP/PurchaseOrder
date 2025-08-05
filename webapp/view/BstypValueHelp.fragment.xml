@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+
+  <SelectDialog
+    title="Select Document Type"
+    items="{/BstypValueHelpSet}"
+    search="onValueHelpSearch"
+    confirm="onValueHelpClose"
+    cancel="onValueHelpCancel">
+
+    <StandardListItem
+      title="{Bstyp}"
+      description="{Description}" />
+
+  </SelectDialog>
+</core:FragmentDefinition>

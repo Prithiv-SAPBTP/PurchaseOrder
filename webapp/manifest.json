@@ -1,0 +1,148 @@
+{
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "newproject",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.3",
+      "toolsId": "3a81a386-4300-4552-9d0f-b0108d26f5cc"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZODATA_SAMPLE1_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.14",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "newproject.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "newproject.view",
+        "async": true,
+        "viewPath": "newproject.view"
+      },
+      "routes": [
+        {
+          "name": "RouteLogin",
+          "pattern": ":?query:",
+          "target": [
+            "TargetLogin"
+          ]
+        },
+        {
+          "name": "HomePage",
+          "pattern": "HomePage",
+          "target": [
+            "Secondview"
+          ]
+        },
+        {
+          "name": "Itemdata",
+          "pattern": "Itemdata/{Ebeln}",
+          "target": [
+            "Thirdview"
+          ]
+        },
+        {
+          "name": "CreatePage",
+          "pattern": "CreatePage",
+          "target": [
+            "Create"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetLogin": {
+          "id": "Login",
+          "name": "Login"
+        },
+        "Create": {
+          "id": "CreatePage",
+        "name": "CreatePage"
+      },
+        "Secondview": {
+            "id": "HomePage",
+          "name": "HomePage"
+        },
+        "Thirdview": {
+            "id": "Itemdata",
+          "name": "Itemdata"
+        }
+      }
+    },
+    
+    "rootView": {
+      "viewName": "newproject.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

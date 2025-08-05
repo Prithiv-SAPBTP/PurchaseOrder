@@ -1,0 +1,40 @@
+<mvc:View controllerName="newproject.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="Login Page" class="img">
+    
+ <!-- <VBox class="sapUiSmallMargin" >
+    <Title text="Login" level="H1"/>
+    <Input id="username" placeholder="Username" width="40%"/>
+    <Input id="password" type="Password" placeholder="Password" width="40%"/>
+    <Button text="Login" press="onLogin"/>
+    <Text id="loginStatus" visible="false"/>
+  </VBox> -->
+
+   <content>
+      <FlexBox
+        justifyContent="Center"
+        alignItems="Center"
+        direction="Column"
+        class="loginPage">
+        
+        <VBox
+          class="loginForm"
+          alignItems="Center"
+          justifyContent="Center"
+          width="300px"
+          renderType="Bare">
+          
+          <Title text="Login Page" level="H1" class="titleText"/>
+          
+          <Input id="username" placeholder="Username" width="100%" class="inputField"/>
+          <Input id="password" type="Password" placeholder="Password" width="100%" class="inputField"/>
+          
+          <Button text="Login" press="onLogin" class="loginButton"/>
+          <Text id="loginStatus" visible="false" class="statusText"/>
+          
+        </VBox>
+      </FlexBox>
+    </content>
+    </Page>
+</mvc:View>

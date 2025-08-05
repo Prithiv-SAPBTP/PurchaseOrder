@@ -1,0 +1,44 @@
+<mvc:View controllerName="newproject.controller.Itemdata"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="Purchasing Document Item Details" showNavButton="true" navButtonPress="onBack" >
+
+    <Table id="ID" items="{poData>/}">
+        <columns>
+            <Column>
+            <Text text="Purchasing Document Number"/>
+            </Column>
+             <Column>
+            <Text text="Item Number of Purchasing Document"/>
+            </Column>
+             <Column>
+            <Text text="Origin of a Purchasing Document Item"/>
+            </Column>
+             <Column>
+            <Text text="Purchasing Document Item Change Date"/>
+            </Column>
+             <Column>
+            <Text text="Short Text"/>
+            </Column>
+            <Column>
+            <Text text="Material Number"/>
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem>
+        <cells>
+            <Text text="{poData>Ebeln}"/>
+            <Text text="{poData>Ebelp}"/>
+            <Text text="{poData>Statu}"/>
+            <Text text="{ path: 'poData>Aedat',
+                          type: 'sap.ui.model.type.Date',
+                         formatOptions: { pattern : 'dd/MM/YYYY'}}"/>
+            <Text text="{poData>Txz01}"/>
+            <Text text="{poData>Matnr}"/>
+        </cells>
+        </ColumnListItem>
+        </items>              
+        </Table>
+    
+    </Page>
+</mvc:View>

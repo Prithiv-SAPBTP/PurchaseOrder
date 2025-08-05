@@ -1,0 +1,59 @@
+<mvc:View controllerName="newproject.controller.HomePage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="Purchasing Document Header Details" showNavButton="true" navButtonPress="onBack" > 
+<Toolbar>
+<content>
+<Title text="Purchasing Document Header Details" />
+<ToolbarSpacer />
+<Button icon="sap-icon://create-form" text="Create" press="onCreate"></Button>
+<Button icon="sap-icon://delete" text="Delete" press="onDelete"></Button>
+</content>
+</Toolbar>
+<Table items="{/HEADERXSet}">
+        <columns>
+            <Column>
+            <Text text="Purchasing Document Number"/>
+            </Column>
+             <Column>
+            <Text text="Company Code"/>
+            </Column>
+             <Column>
+            <Text text="Document Category"/>
+            </Column>
+             <Column>
+            <Text text="Document Type"/>
+            </Column>
+             <Column>
+            <Text text="Status of Purchasing"/>
+            </Column>
+            <Column>
+            <Text text="Last Item Number"/>
+            </Column>
+            <Column>
+            <Text text="Creation Date of Purchasing"/>
+            </Column>
+            <Column>
+            <Label text="Action"></Label>
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem type="Navigation" press="onPress">
+        <cells>
+            <Text text="{Ebeln}"/>
+            <Text text="{Bukrs}"/>
+            <Text text="{Bstyp}"/>
+            <Text text="{Bsart}"/>
+            <Text text="{Statu}"/>
+            <Text text="{Lponr}"/>
+            <Text text="{ path: 'Aedat',
+                          type: 'sap.ui.model.type.Date',
+                         formatOptions: { pattern : 'dd/MM/YYYY'}}"/>
+            <Button icon="sap-icon://edit" text="Edit" press="onEdit" />             
+        </cells>
+        </ColumnListItem>
+        </items>              
+        </Table>
+
+    </Page>
+</mvc:View>

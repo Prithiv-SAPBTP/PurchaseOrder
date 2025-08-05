@@ -1,0 +1,43 @@
+.loginPage {
+    height: 100vh;
+    /* background: linear-gradient(to bottom right, #4e54c8, #8f94fb); */
+  }
+  
+  .loginForm {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    gap: 2rem;
+    height: 60%;
+  }
+  
+  .titleText {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .inputField {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+  
+  .loginButton {
+    color: rgb(48, 85, 206);
+    width: 30%;
+    border-radius: 20%;
+  }
+  
+  /* .loginButton:hover {
+    background-color: #181919;
+  }
+   */
+  .statusText {
+    color: red;
+    font-size: 0.9rem;
+  }
+
+  .img{
+    background-image: url(https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg);
+  }

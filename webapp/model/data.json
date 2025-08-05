@@ -1,0 +1,34 @@
+  {
+    "roles": [{
+      "Username": "Prithiv",
+      "Password": "123456",  
+      "Email": "prithiv.g10@gmail.com"
+    },
+    {
+      "Username": "Sam",
+      "Password": "123456",  
+      "Email": "prithiv.g10@gmail.com"
+    },
+    {
+      "Username": "Deepak",
+      "Password": "123456",  
+      "Email": "prithiv.g10@gmail.com"
+    },
+    {
+      "Username": "Sabari",
+      "Password": "123456",  
+      "Email": "prithiv.g10@gmail.com"
+    }
+  
+  ],
+  "value6": null,
+    "countries": [
+        {"key": "AT", "name": "Austria"},
+        {"key": "BE", "name": "Belgium"},
+        {"key": "BG", "name": "Bulgaria"},
+        {"key": "HR", "name": "Croatia"},
+        {"key": "CY", "name": "Cyprus"},
+        {"key": "CZ", "name": "Czechia"}
+    ] 
+  }
+  
