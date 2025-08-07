@@ -11,9 +11,6 @@
              <Column>
             <Text text="Item Number of Purchasing Document"/>
             </Column>
-             <!-- <Column>
-            <Text text="Origin of a Purchasing Document Item"/>
-            </Column> -->
              <Column>
             <Text text="Purchasing Document Item Change Date"/>
             </Column>
@@ -29,7 +26,6 @@
         <cells>
             <Text text="{poData>Ebeln}"/>
             <Text text="{poData>Ebelp}"/>
-            <!-- <Text text="{poData>Statu}"/> -->
             <Text text="{ path: 'poData>Aedat',
                           type: 'sap.ui.model.type.Date',
                          formatOptions: { pattern : 'dd/MM/YYYY'}}"/>
@@ -38,7 +34,6 @@
         </cells>
         </ColumnListItem>
         </items>              
-        </Table>
-    
+        </Table>    
     </Page>
 </mvc:View>

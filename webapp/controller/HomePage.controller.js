@@ -56,7 +56,8 @@ sap.ui.define([
         onDelete:function(){
             var selectedTableRow = this.getView().byId("Id").getSelectedItem();
             var oSelectedData = selectedTableRow.getBindingContext().getObject();
-            MessageBox.confirm("Are you sure want to delete the Record",{
+            var oEbeln = selectedTableRow.getBindingContext().getObject().Ebeln;
+            MessageBox.confirm("Are you sure want to delete the"+ oEbeln +"Record",{
                 title: "Confirm",
                 onClose:function(oAction){
                     if(oAction === 'OK'){
