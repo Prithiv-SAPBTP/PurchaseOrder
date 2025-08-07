@@ -52,6 +52,35 @@ sap.ui.define([
         },
         onCancel: function () {
             this.addproduct.close();
-        }   
+        },
+        onDelete:function(){
+            var selectedTableRow = this.getView().byId("Id").getSelectedItem();
+            var oSelectedData = selectedTableRow.getBindingContext().getObject();
+            MessageBox.confirm("Are you sure want to delete the Record",{
+                title: "Confirm",
+                onClose:function(oAction){
+                    if(oAction === 'OK'){
+                        this.onDeleteRecord(oSelectedData);
+                    }
+                }.bind(this),
+                actions:[sap.m.MessageBox.Action.OK,
+                    sap.m.MessageBox.Action.CANCEL],
+                    emphasizedAction:sap.m.MessageBox.Action.OK,
+            })            
+        },
+        onDeleteRecord:function(oRecord){
+            var oDataModel = this.getOwnerComponent().getModel();
+            var sEbeln = oRecord.Ebeln.toString().padStart(10, '0');
+            var sPath = "/HEADERXSet(Ebeln='" + sEbeln + "')";
+
+            oDataModel.remove(sPath, {
+                success: function() {
+                    sap.m.MessageToast.show("Record deleted successfully!");
+                }.bind(this),
+                error: function() {
+                    sap.m.MessageBox.error("Error deleting record.");
+                }.bind(this)
+            });
+        }
     });
       });
